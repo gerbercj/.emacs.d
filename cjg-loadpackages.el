@@ -1,6 +1,6 @@
 ; ~/.emacs.d/my-loadpackages.el
 ; loading package
-(load (expand-file-name "cjg-packages.el" cjg-emacs-config-dir))
+(load (expand-file-name "cjg-packages.el" user-emacs-directory))
 
 (require 'evil)
 (evil-mode 1)
