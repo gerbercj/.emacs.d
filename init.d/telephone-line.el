@@ -1,13 +1,3 @@
-; ~/.emacs.d/my-loadpackages.el
-; loading package
-(load (expand-file-name "cjg-packages.el" user-emacs-directory))
-
-(require 'evil)
-(evil-mode 1)
-
-(require 'magit)
-(define-key global-map (kbd "C-c m") 'magit-status)
-
 (require 'telephone-line)
 (setq telephone-line-lhs
       '((evil   . (telephone-line-evil-tag-segment))
@@ -21,9 +11,3 @@
         (accent . (telephone-line-major-mode-segment))
         (evil   . (telephone-line-airline-position-segment))))
 (telephone-line-mode 1)
-
-(require 'yasnippet)
-(yas-global-mode 1)
-(yas-load-directory "~/.emacs.d/snippets")
-(add-hook 'term-mode-hook (lambda()
-    (setq yas-dont-activate t)))
